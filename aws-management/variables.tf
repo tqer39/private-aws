@@ -39,3 +39,6 @@ variable "profile" {
   default     = "private-aws"
   type        = string
 }
+
+variable "PGP_KEY_PRIVATE_AWS" {}
+variable "AWS_ACCOUNT_ID_MANAGEMENT" {}
