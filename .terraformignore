@@ -630,3 +630,5 @@ LICENSE.md
 README.md
 .gitignore
 .git/**
+.editorconfig
+.gitattributes
