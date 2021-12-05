@@ -4,12 +4,6 @@ variable "Environment" {
   default     = "prd"
 }
 
-variable "Project" {
-  description = "プロジェクト名。"
-  type        = string
-  default     = "AWS Management"
-}
-
 variable "IaC" {
   description = "IaC（Infrastructure as Code）で使用したソフトウェア。"
   type        = string
@@ -34,11 +28,6 @@ variable "region" {
   type        = string
 }
 
-variable "profile" {
-  description = "AWS の管理を行う実行ユーザー"
-  default     = "private-aws"
-  type        = string
-}
-
-variable "PGP_KEY_PRIVATE_AWS" {}
-variable "AWS_ACCOUNT_ID_MANAGEMENT" {}
+variable "PGP_KEY" {}
+variable "AWS_ACCOUNT_ID" {}
+variable "GITHUB_REPOSITORY_NAME" {}
