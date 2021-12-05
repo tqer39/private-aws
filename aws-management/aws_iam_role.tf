@@ -22,3 +22,25 @@ resource "aws_iam_role" "runs_from_service" {
     ]
   })
 }
+
+resource "aws_iam_role" "github_actions" {
+  provider = aws.management
+  name     = "github-actions"
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [{
+      Effect = "Allow"
+      Action = "sts:AssumeRoleWithWebIdentity"
+      Principal = {
+        Federated = aws_iam_openid_connect_provider.github_actions.arn
+      }
+      Condition = {
+        StringLike = {
+          "token.actions.githubusercontent.com:sub" = [
+            "repo:${var.GITHUB_REPOSITORY_NAME}:*"
+          ]
+        }
+      }
+    }]
+  })
+}

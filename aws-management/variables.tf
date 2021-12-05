@@ -30,3 +30,4 @@ variable "region" {
 
 variable "PGP_KEY" {}
 variable "AWS_ACCOUNT_ID" {}
+variable "GITHUB_REPOSITORY_NAME" {}
