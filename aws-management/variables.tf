@@ -28,5 +28,5 @@ variable "region" {
   type        = string
 }
 
-variable "PGP_KEY_PRIVATE_AWS" {}
-variable "AWS_ACCOUNT_ID_MANAGEMENT" {}
+variable "PGP_KEY" {}
+variable "AWS_ACCOUNT_ID" {}

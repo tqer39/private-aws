@@ -26,7 +26,7 @@ provider "aws" {
   alias  = "management"
   region = var.region
   assume_role {
-    role_arn = "arn:aws:iam::${var.PRIVATE_AWS_AWS_MANAGEMENT_AWS_ACCOUNT_ID}:role/terraform"
+    role_arn = "arn:aws:iam::${var.AWS_ACCOUNT_ID}:role/terraform"
   }
   default_tags {
     tags = local.common_tags
