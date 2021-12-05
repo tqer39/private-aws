@@ -4,12 +4,6 @@ variable "Environment" {
   default     = "prd"
 }
 
-variable "Project" {
-  description = "プロジェクト名。"
-  type        = string
-  default     = "AWS Management"
-}
-
 variable "IaC" {
   description = "IaC（Infrastructure as Code）で使用したソフトウェア。"
   type        = string
@@ -31,12 +25,6 @@ variable "TFC_Workspace" {
 variable "region" {
   description = "当プロジェクトにおけるデフォルトのリージョン。"
   default     = "ap-northeast-1"
-  type        = string
-}
-
-variable "profile" {
-  description = "AWS の管理を行う実行ユーザー"
-  default     = "private-aws"
   type        = string
 }
 
